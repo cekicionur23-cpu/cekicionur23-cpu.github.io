@@ -1,0 +1,36 @@
+// Sayfa yüklendiğinde
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Hizmet kartlarına giriş animasyonu
+    const cards = document.querySelectorAll(".card");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, { threshold: 0.2 });
+
+    cards.forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(40px)";
+        card.style.transition = "0.6s ease";
+        observer.observe(card);
+    });
+
+});
+
+// Hemen Ara
+function ara() {
+    window.location.href = "tel:+905016322802";
+}
+
+// WhatsApp
+function whatsapp() {
+    window.open(
+        "https://wa.me/905016322802?text=Merhaba%20Elazığ%20Merkez%20Oto%20Çekici,%20çekici%20hizmeti%20almak%20istiyorum.",
+        "_blank"
+    );
+}
