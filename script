@@ -1,36 +1,34 @@
-// Sayfa yüklendiğinde
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Hizmet kartlarına giriş animasyonu
-    const cards = document.querySelectorAll(".card");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    }, { threshold: 0.2 });
-
-    cards.forEach((card) => {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(40px)";
-        card.style.transition = "0.6s ease";
-        observer.observe(card);
-    });
-
-});
-
-// Hemen Ara
-function ara() {
-    window.location.href = "tel:+905016322802";
-}
-
-// WhatsApp
-function whatsapp() {
-    window.open(
-        "https://wa.me/905016322802?text=Merhaba%20Elazığ%20Merkez%20Oto%20Çekici,%20çekici%20hizmeti%20almak%20istiyorum.",
-        "_blank"
-    );
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Oto Kurtarma</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        header { background: #111; color: #fff; padding: 15px; text-align: center; }
+        nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+        .content { background: #fff; padding: 30px; margin: 20px auto; max-width: 800px; border-radius: 8px; }
+        footer { text-align: center; padding: 20px; background: #222; color: #ccc; margin-top: 40px; }
+        footer a { color: #ccc; text-decoration: underline; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>7/24 Oto Kurtarma</h1>
+    <nav>
+        <a href="index.html">Ana Sayfa</a> | 
+        <a href="hizmetler.html">Hizmetlerimiz</a> | 
+        <a href="hakkimizda.html">Hakkımızda</a> | 
+        <a href="iletisim.html">İletişim</a>
+    </nav>
+</header>
+<div class="content">
+    <h2>Hakkımızda</h2>
+    <p>Yılların verdiği tecrübe ve modern araç filomuzla 7/24 kesintisiz oto kurtarma ve yol yardım hizmeti sunuyoruz. Müşteri memnuniyeti ve güvenli taşıma odaklı çalışarak yolda kalan sürücülere en hızlı çözümü sağlıyoruz.</p>
+</div>
+<footer>
+    <p><a href="gizlilik-politikasi.html">Gizlilik Politikası</a></p>
+</footer>
+</body>
+</html>
